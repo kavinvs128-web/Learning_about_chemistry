@@ -23,9 +23,9 @@
 
 .signin-panel {
 
-  width: 520px;
+  width: 820px;
 
-  min-height: 560px;
+  min-height: 860px;
 
   background: rgba(23,34,53,0.92);
 
@@ -48,7 +48,7 @@
 
 .signin-panel h1 {
 
-  font-size: 48px;
+  font-size: 70px;
 
   line-height: 1.2;
 
@@ -92,11 +92,11 @@ form {
 
 input {
 
-  height:65px;
+  height:75px;
 
   padding:0 22px;
 
-  border-radius:18px;
+  border-radius:28px;
 
   border:none;
 
@@ -106,7 +106,7 @@ input {
 
   color:white;
 
-  font-size:20px;
+  font-size:25px;
 
 }
 
@@ -126,7 +126,7 @@ input::placeholder {
 
 form button {
 
-  height:65px;
+  height:85px;
 
   border-radius:35px;
 
@@ -136,7 +136,7 @@ form button {
 
   color:#06101f;
 
-  font-size:21px;
+  font-size:27px;
 
   font-weight:bold;
 
@@ -173,6 +173,6 @@ form p {
 
   margin-top:20px;
 
-  font-size:18px;
+  font-size:28px;
 
 }

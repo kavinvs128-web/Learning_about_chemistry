@@ -16,8 +16,8 @@ import {useState,useEffect} from "react";
 import WordsOfWisdom from "../components/WordsOfWisdom";
 
 import "../styles/home.css";
-
-
+import Livebooks from "../pages/Livebooks.jsx"; 
+import Classeleven from "../pages/Classeleven.jsx";
 function Home(){
 
 
@@ -27,7 +27,7 @@ const [notificationOpen,setNotificationOpen] = useState(false);
 
 const [darkMode,setDarkMode] = useState(true);
 
-
+const [activePage,setActivePage] = useState("dashboard");
 
 const [user,setUser] = useState({
 
@@ -63,6 +63,22 @@ if (!savedUser) return;
 
 },[]);
 
+if (activePage === "livebooks") {
+  return (
+    <Livebooks
+      onBack={() => setActivePage("dashboard")}
+      onSelectCategory={(categoryId) => {
+        if (categoryId === "class11") {
+          setActivePage("class11");
+        }
+      }}
+    />
+  );
+}
+
+if (activePage === "class11") {
+  return <Classeleven onBack={() => setActivePage("livebooks")} />;
+}
 
 
 
@@ -544,10 +560,10 @@ title="Live Books"
 
 text="Explore interactive chemistry books with animations & live examples."
 
-badge="40 Books"
+badge="3 Books"
 
 color="blue"
-
+onClick={() => setActivePage("livebooks")}
 />
 
 
@@ -617,7 +633,6 @@ color="green"
 
 )
 
-}
 
 
 
@@ -626,13 +641,14 @@ color="green"
 
 
 
-function Card({icon,title,text,badge,color}){
+
+function Card({icon,title,text,badge,color,onClick}){
 
 
 return(
 
 
-<div className={`feature-card ${color}`}>
+<div className={`feature-card ${color}`}onClick={onClick}>
 
 
 <div className="feature-icon">
@@ -690,5 +706,5 @@ return(
 }
 
 
-
+}
 export default Home;

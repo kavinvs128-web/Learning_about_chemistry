@@ -1,0 +1,229 @@
+/* ===== LiveBooks.css ===== */
+
+.lb-root {
+  min-height: 100vh;
+  background: #080d1a;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Topbar ── */
+.lb-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.lb-top-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lb-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lb-logo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.lb-logo-title {
+  font-weight: 700;
+  font-size: 29px;
+}
+
+.lb-logo-sub {
+  font-size: 15px;
+  color: #22d3ee;
+  letter-spacing: 1px;
+}
+
+.lb-divider {
+  width: 2px;
+  height: 45px;
+  background: #1e293b;
+}
+
+.lb-page-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.lb-page-title-icon {
+  font-size: 29px;
+}
+
+.lb-back-btn {
+  background: #1e293b;
+  border: 3px solid #334155;
+  border-radius: 25px;
+  color: #94a3b8;
+  padding: 10px 20px;
+  font-size: 23px;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.lb-back-btn:hover {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+/* ── Hero ── */
+.lb-hero {
+  text-align: center;
+  padding: 72px 20px 48px;
+}
+
+.lb-hero-eyebrow {
+  font-size: 20px;
+  color: #22d3ee;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.lb-hero-title {
+  font-size: 60px;
+  font-weight: 950;
+  margin: 0 0 18px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.lb-hero-accent {
+  color: #22d3ee;
+}
+
+.lb-hero-sub {
+  color: #64748b;
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+/* ── Cards Row ── */
+.lb-cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 0 60px 80px;
+  flex-wrap: wrap;
+}
+
+.lb-card {
+  background: #0d1527;
+  border: 1px solid #1e2a3a;
+  border-radius: 20px;
+  padding: 60px 42px;
+  width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lb-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Per-card border accent */
+.lb-card--class12 { border-color: rgba(30, 64, 175, 0.27); }
+.lb-card--class11 { border-color: rgba(91, 33, 182, 0.27); }
+.lb-card--neet    { border-color: rgba(5, 64, 38, 0.27); }
+
+/* ── Icon Box ── */
+.lb-icon-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  margin-bottom: 24px;
+}
+
+/* Per-card icon gradient */
+.lb-icon--class12 { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
+.lb-icon--class11 { background: linear-gradient(135deg, #a855f7, #7c3aed); }
+.lb-icon--neet    { background: linear-gradient(135deg, #10b981, #059669); }
+
+/* ── Card Content ── */
+.lb-card-title {
+  font-weight: 800;
+  font-size: 35px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.lb-card-desc {
+  color: #64748b;
+  font-size: 26px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.lb-count-badge {
+  background: #1e293b;
+  border-radius: 35px;
+  padding: 10px 24px;
+  font-size: 19px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .lb-cards-row {
+    gap: 20px;
+    padding: 0 30px 60px;
+  }
+  .lb-card {
+    width: 260px;
+  }
+}
+
+@media (max-width: 700px) {
+  .lb-topbar {
+    padding: 12px 16px;
+  }
+  .lb-hero-title {
+    font-size: 34px;
+  }
+  .lb-cards-row {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 60px;
+  }
+  .lb-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}

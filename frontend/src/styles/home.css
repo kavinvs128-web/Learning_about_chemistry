@@ -735,7 +735,7 @@ cursor:pointer;
 
 .dashboard{
 
-padding:60px;
+padding:80px;
 
 }
 
@@ -778,7 +778,7 @@ color:transparent;
 .welcome p{
 
 
-font-size:26px;
+font-size:25px;
 
 color:#ffffff90;
 
@@ -798,7 +798,7 @@ color:#ffffff90;
 .features{
 
 
-padding:0 60px 50px;
+padding:0 70px 60px;
 
 
 display:grid;
@@ -815,19 +815,19 @@ gap:25px;
 .feature-card{
 
 
-height:260px;
+height:280px;
 
 
-padding:28px;
+padding:30px;
 
 
-border-radius:30px;
+border-radius:34px;
 
 
 background:#ffffff08;
 
 
-border:1px solid #ffffff20;
+border:2px solid #ffffff20;
 
 
 display:flex;
@@ -853,9 +853,9 @@ transform:translateY(-8px);
 .feature-icon{
 
 
-width:65px;
+width:70px;
 
-height:65px;
+height:70px;
 
 
 border-radius:20px;

@@ -622,6 +622,47 @@ export default function OxidationReduction({ onBack }) {
         <section className="or-section">
           <div className="or-section-tag"><span className="or-section-num">5</span> Special cases</div>
           <h2>When one element plays both roles</h2>
+
+          {/* Disproportionation video */}
+          {/* VIDEO */}
+
+{/* VIDEO SECTION */}
+
+<div className="video-heading">
+
+  <div className="video-tag">
+    🎬 CONCEPT VIDEO
+  </div>
+
+  <h3>
+    Disproportionation Reaction Explained
+  </h3>
+
+  <p>
+    Watch this short explanation before reading the notes below.
+  </p>
+
+</div>
+
+
+<div className="lesson-video-wrapper">
+
+  <video
+    className="lesson-video"
+    controls
+    playsInline
+  >
+
+    <source
+      src="/Videos/disproportionation.mp4"
+      type="video/mp4"
+    />
+
+    Your browser does not support the video tag.
+
+  </video>
+
+</div>
           <div className="or-def-card neutral" style={{ marginBottom: 16 }}>
             <div className="or-def-card-head accent">Disproportionation</div>
             <p style={{ margin: "0 0 12px", fontSize: 24 }}>The same element is oxidized <em>and</em> reduced in the same reaction.</p>

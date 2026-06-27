@@ -12,8 +12,15 @@ const learningPath = [
         title: "Oxidation And Reduction",
       },
     ],
-    
   },
+    {
+    id: 6,
+    title: "Gaseous State",
+    },
+    {
+     id: 12,
+     title:"Basic concepts of organic reactions", 
+    },  
 ];
 
 export default function ClassEleven({ onBack }) {

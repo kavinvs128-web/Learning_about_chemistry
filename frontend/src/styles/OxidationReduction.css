@@ -277,7 +277,7 @@
   padding: 40px 48px;
   margin: 20px auto;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 30px;
+  font-size: 35px;
   text-align: left;
   overflow-x: auto;
 }
@@ -306,10 +306,9 @@
 .or-electron-stage-label {
   text-align: left;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 25px;
+  font-size: 27px;
   letter-spacing: 2px;
   color: #64748b;
-  text-transform: uppercase;
   margin-bottom: 36px;
 }
 .or-atoms-row {
@@ -440,8 +439,8 @@
   transition: opacity 0.4s ease 0.9s, transform 0.4s ease 0.9s;
 }
 .or-electron-stage.or-zapped .or-readout-item { opacity: 1; transform: translateY(0); }
-.or-readout-item .or-rv { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 23px; }
-.or-readout-item .or-rl { font-size: 20px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; }
+.or-readout-item .or-rv { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 25px; }
+.or-readout-item .or-rl { font-size: 22px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; }
 .or-readout-item.ox  .or-rv { color: #fb923c; }
 .or-readout-item.red .or-rv { color: #22d3ee; }
 

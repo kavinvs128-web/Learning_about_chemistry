@@ -743,7 +743,7 @@ padding:80px;
 
 .emoji{
 
-font-size:45px;
+font-size:48px;
 
 }
 
@@ -912,7 +912,8 @@ color:#ffffff80;
 flex:1;
 
 line-height:1.6;
-
+ 
+font-size: 20px;
 }
 
 

@@ -20,7 +20,7 @@ const sideNavItems = [
 const flashcards = [
   { q: "What does OIL stand for?", a: "Oxidation Is Loss of electrons" },
   { q: "What does RIG stand for?", a: "Reduction Is Gain of electrons" },
-  { q: "Oxidation number of free elements?", a: "Always 0 — e.g. Na, H₂, O₂, Cl₂" },
+  { q: "Oxidation number of free elements?", a: "Always 0 — e.g. Na, Fe, He, Ne" },
   { q: "Oxidation number of O in a peroxide?", a: "−1 (e.g. in H₂O₂)" },
   { q: "In CuO + H₂ → Cu + H₂O, who's the reducing agent?", a: "H₂ — it gets oxidized to H₂O" },
   { q: "Mn oxidation number in KMnO₄?", a: "+7" },
@@ -165,7 +165,7 @@ function ElectronStage() {
       <div className="or-electron-controls">
         <button className="or-electron-btn" onClick={handleClick}>
           {zapped ? (
-            <><RotateCcw size={15} style={{ marginRight: 6, verticalAlign: "-2px" }} />Reset</>
+            <><RotateCcw size={25} style={{ marginRight: 6, verticalAlign: "-2px" }} />Reset</>
           ) : (
             <><Zap size={28} style={{ marginRight: 6, verticalAlign: "-2px" }} />Transfer electrons</>
           )}
@@ -560,7 +560,7 @@ export default function OxidationReduction({ onBack }) {
                 <li>Gains oxygen <span className="or-eq">2Mg + O₂ → 2MgO</span></li>
                 <li>Loses hydrogen <span className="or-eq">CH₃CH₂OH → CH₃CHO + H₂</span></li>
                 <li>Loses electrons <span className="or-eq">Zn → Zn²⁺ + 2e⁻</span></li>
-                <li>Oxidation number increases <span className="or-eq">Fe²⁺ → Fe³⁺ (+2 → +3)</span></li>
+                <li>Oxidation number increases <span className="or-eq">Fe²⁺ → Fe³⁺ + e⁻ (+2 → +3)</span></li>
               </ul>
             </div>
             <div className="or-def-card red">
@@ -588,7 +588,7 @@ export default function OxidationReduction({ onBack }) {
                 <span className="or-pill">KMnO₄</span><span className="or-pill">K₂Cr₂O₇</span>
                 <span className="or-pill">H₂O₂</span><span className="or-pill">O₂</span><span className="or-pill">Cl₂</span>
               </div>
-              <div className="or-agent-example">Cu + Cl₂ → CuCl₂ — Cl₂ is the oxidizing agent</div>
+              <div className="or-agent-example">Cu + Cl₂ → CuCl₂  <br /> Cl₂ is the oxidizing agent</div>
             </div>
             <div className="or-agent-card red">
               <h4>Reducing agent</h4>
@@ -597,24 +597,16 @@ export default function OxidationReduction({ onBack }) {
                 <span className="or-pill">H₂</span><span className="or-pill">CO</span>
                 <span className="or-pill">Zn</span><span className="or-pill">Fe</span><span className="or-pill">NaBH₄</span>
               </div>
-              <div className="or-agent-example">CuO + H₂ → Cu + H₂O — H₂ is the reducing agent</div>
+              <div className="or-agent-example">CuO + H₂ → Cu + H₂O <br /> H₂ is the reducing agent</div>
             </div>
           </div>
           <h2 style={{ marginTop: 40 }}>Oxidation number rules</h2>
           <div className="or-rules-list">
-            <div className="or-rule-row"><div className="or-rule-num">01</div><div className="or-rule-body"><strong>Free elements = 0</strong><span className="or-eg">Na, H₂, O₂, Cl₂ → all 0</span></div></div>
-            <div className="or-rule-row"><div className="or-rule-num">02</div><div className="or-rule-body"><strong>Monoatomic ions = their charge</strong><span className="or-eg">Na⁺ = +1 &nbsp; Mg²⁺ = +2 &nbsp; Cl⁻ = −1</span></div></div>
-            <div className="or-rule-row"><div className="or-rule-num">03</div><div className="or-rule-body"><strong>Hydrogen</strong> — usually +1, but −1 in metal hydrides<span className="or-eg">  HCl → H is +1 | NaH → H is −1</span></div></div>
-            <div className="or-rule-row"><div className="or-rule-num">04</div><div className="or-rule-body"><strong>Oxygen</strong> — usually −2, peroxide −1, superoxide −1/2<span className="or-eg">  H₂O₂ → −1 | KO₂ → −1/2</span></div></div>
-            <div className="or-rule-row"><div className="or-rule-num">05</div><div className="or-rule-body"><strong>Sum of oxidation numbers</strong> — neutral molecule = 0, polyatomic ion = charge on ion</div></div>
-          </div>
-          <h2 style={{ marginTop: 40 }}>High-frequency oxidation numbers (JEE &amp; NEET)</h2>
-          <div className="or-rules-list">
-            <div className="or-rule-row"><div className="or-rule-num or-mono">Mn</div><div className="or-rule-body"><strong>KMnO₄ → Mn = +7</strong></div></div>
-            <div className="or-rule-row"><div className="or-rule-num or-mono">Cr</div><div className="or-rule-body"><strong>K₂Cr₂O₇ → Cr = +6</strong></div></div>
-            <div className="or-rule-row"><div className="or-rule-num or-mono">O</div><div className="or-rule-body"><strong>H₂O₂ → O = −1</strong></div></div>
-            <div className="or-rule-row"><div className="or-rule-num or-mono">O</div><div className="or-rule-body"><strong>KO₂ → O = −1/2</strong></div></div>
-            <div className="or-rule-row"><div className="or-rule-num or-mono">Cl</div><div className="or-rule-body"><strong>ClO₄⁻ → Cl = +7</strong></div></div>
+            <div className="or-rule-row"><div className="or-rule-num">01</div><div className="or-rule-body"><strong>Free elements = 0</strong><span className="or-eg">Na, Fe, He, Ne → all 0</span></div></div>
+            <div className="or-rule-row"><div className="or-rule-num">02</div><div className="or-rule-body"><strong>Homoatomic elements = 0</strong><span className="or-eg">H₂, Cl₂, O₃, N₂ → all also 0</span></div></div>
+            <div className="or-rule-row"><div className="or-rule-num">03</div><div className="or-rule-body"><strong>Monoatomic ions = their charge</strong><span className="or-eg">Na⁺ = +1 &nbsp; Mg²⁺ = +2 &nbsp; Cl⁻ = −1</span></div></div>
+            <div className="or-rule-row"><div className="or-rule-num">04</div><div className="or-rule-body"><strong>Hydrogen</strong><div style={{ marginTop: "6px", color: "#64748b", fontSize: "24px", lineHeight: "2" }}>— usually +1 <span className="or-eg" style={{ marginLeft: "8px" }}>(e.g. HCl → H is +1)</span></div><div style={{ color: "#64748b", fontSize: "24px", lineHeight: "2" }}>— metal hydrides −1<span className="or-eg" style={{ marginLeft: "8px" }}>(e.g. NaH → H is −1)</span></div></div></div>
+            <div className="or-rule-row"><div className="or-rule-num">05</div><div className="or-rule-body"><strong>Oxygen</strong><div style={{ marginTop: "6px", color: "#64748b", fontSize: "24px", lineHeight: "2" }}>— usually −2<span className="or-eg" style={{ marginLeft: "8px" }}>( e.g. H₂O → O is −2)</span></div><div style={{ color: "#64748b", fontSize: "24px", lineHeight: "2" }}>— peroxide −1<span className="or-eg" style={{ marginLeft: "8px" }}>( e.g. H₂O₂ → O is −1)</span></div><div style={{ color: "#64748b", fontSize: "24px", lineHeight: "2" }}>— superoxide −1/2<span className="or-eg" style={{ marginLeft: "8px" }}>( e.g. KO₂ → O is −1/2)</span></div></div></div>
           </div>
         </section>
 
@@ -665,17 +657,17 @@ export default function OxidationReduction({ onBack }) {
 </div>
           <div className="or-def-card neutral" style={{ marginBottom: 16 }}>
             <div className="or-def-card-head accent">Disproportionation</div>
-            <p style={{ margin: "0 0 12px", fontSize: 24 }}>The same element is oxidized <em>and</em> reduced in the same reaction.</p>
+            <p style={{ margin: "0 0 12px", fontSize: 27 }}>The same element is oxidized <em>and</em> reduced in the same reaction.</p>
             <div className="or-reaction-box" style={{ margin: "0 0 10px" }}>
               2H<sub>2</sub>O<sub>2</sub> <span className="or-arrow">→</span> 2H<sub>2</sub>O <span className="or-arrow">+</span> O<sub>2</sub>
             </div>
-            <p style={{ margin: 0, fontSize: 18, color: "#64748b" }}>
+            <p style={{ margin: 0, fontSize: 20, color: "#64748b" }}>
               Oxygen goes from −1 → −2 <span className="or-tag-red">(reduced)</span> and −1 → 0 <span className="or-tag-ox">(oxidized)</span>, simultaneously.
             </p>
           </div>
           <div className="or-def-card neutral">
             <div className="or-def-card-head accent">Comproportionation</div>
-            <p style={{ margin: "0 0 12px", fontSize: 24 }}>Two different oxidation states of the same element combine into one intermediate state.</p>
+            <p style={{ margin: "0 0 12px", fontSize: 27 }}>Two different oxidation states of the same element combine into one intermediate state.</p>
             <div className="or-reaction-box" style={{ margin: 0 }}>
               Fe <span className="or-arrow">+</span> 2Fe³⁺ <span className="or-arrow">→</span> 3Fe²⁺
             </div>
@@ -693,6 +685,17 @@ export default function OxidationReduction({ onBack }) {
             {flashcards.map((card, i) => <Flashcard key={i} card={card} />)}
           </div>
         </section>
+        
+        <section className="or-section" id="or-sec-agents">
+         <h2 style={{ marginTop: 40 }}>High-frequency oxidation numbers (JEE &amp; NEET)</h2>
+          <div className="or-rules-list">
+            <div className="or-rule-row"><div className="or-rule-num or-mono">Mn</div><div className="or-rule-body"><strong>KMnO₄ → Mn = +7</strong></div></div>
+            <div className="or-rule-row"><div className="or-rule-num or-mono">Cr</div><div className="or-rule-body"><strong>K₂Cr₂O₇ → Cr = +6</strong></div></div>
+            <div className="or-rule-row"><div className="or-rule-num or-mono">O</div><div className="or-rule-body"><strong>H₂O₂ → O = −1</strong></div></div>
+            <div className="or-rule-row"><div className="or-rule-num or-mono">O</div><div className="or-rule-body"><strong>KO₂ → O = −1/2</strong></div></div>
+            <div className="or-rule-row"><div className="or-rule-num or-mono">Cl</div><div className="or-rule-body"><strong>ClO₄⁻ → Cl = +7</strong></div></div>
+           </div>
+        </section>   
 
         {/* 7. Worked examples */}
         <section className="or-section" id="or-sec-worked">
@@ -707,13 +710,15 @@ export default function OxidationReduction({ onBack }) {
           <div className="or-worked">
             <div className="or-wq">Find the oxidation number of Cr in K₂Cr₂O₇</div>
             <div className="or-wstep">2(+1) + 2x + 7(−2) = 0</div>
-            <div className="or-wstep">2 + 2x − 14 = 0 → 2x = 12</div>
+            <div className="or-wstep">2 + 2x − 14 = 0 </div>
+            <div className="or-wstep">2x = 12</div>
             <div className="or-wans">x = +6</div>
           </div>
           <div className="or-worked">
             <div className="or-wq">(JEE level) Oxidation number of S in Na₂S₄O₆</div>
             <div className="or-wstep">2(+1) + 4x + 6(−2) = 0</div>
-            <div className="or-wstep">2 + 4x − 12 = 0 → 4x = 10</div>
+            <div className="or-wstep">2 + 4x − 12 = 0 </div>
+            <div className="or-wstep">4x = 10</div>
             <div className="or-wans">x = +2.5</div>
           </div>
         </section>
@@ -792,3 +797,8 @@ export default function OxidationReduction({ onBack }) {
     </div>
   );
 }
+
+
+
+
+
